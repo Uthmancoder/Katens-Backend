@@ -133,7 +133,7 @@ const AddReplyToComment = asyncHandler(async (req, res) => {
   };
 
   const updatedComment = await CommentModel.findByIdAndUpdate(
-    { repliedCommentId }, // Use the document ID as the first argument
+     repliedCommentId, // Use the document ID as the first argument
     {
       $push: { Replies: replyDetails }, // Use $push to add a new element to the array
     },
