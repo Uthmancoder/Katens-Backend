@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const { PostModel } = require("../Models/PostModels");
+const bcrypt = require("bcryptjs");
 const { UserModel } = require("../Models/UserModel");
 const { cloudinary, cloudinaryConfig } = require("../Config/CloudineryConfig");
 
